@@ -1,6 +1,3 @@
-const win = "You Won!"
-const lose = "You Lost!"
-const draw = "You Drew!"
 const choices = ['rock', 'paper', 'scissors'];
 
 function getComputerChoice() {
@@ -49,6 +46,7 @@ function game() {
             console.log(computerSelection);
             console.log(playerScore);
             console.log(cpuScore);
+            document.getElementById("eachPlay").innerHTML = `You played: ${playerSelection}, PC played: ${computerSelection}`;
 
                 if (result == 0) {
                     console.log("You Won!");
@@ -67,7 +65,8 @@ function game() {
                 }
 
     // }
-
+    
+    // console.log
     if (playerScore > cpuScore) {
         console.log("You Won! Your score was: " + playerScore);
     } else if (playerScore < cpuScore) {
@@ -75,6 +74,19 @@ function game() {
     } else {
         console.log("You Drew! Your score was: " + playerScore);
     }
+
+    // html
+    if (playerScore > cpuScore) {
+        console.log("You Won! Your score was: " + playerScore);
+        document.getElementById("winLose").innerHTML = `You Won! Your score was: ${playerScore}`;
+    } else if (playerScore < cpuScore) {
+        console.log("You Lost! Your score was: " + playerScore);
+        document.getElementById("winLose").innerHTML = `You Lost! Your score was: ${playerScore}`;
+    } else {
+        console.log("You Drew! Your score was: " + playerScore);
+        document.getElementById("winLose").innerHTML = `You Drew! Your score was: ${playerScore}`;
+    }
+
 }
 
 function rockButtonClick() {
@@ -92,7 +104,13 @@ function scissorButtonClick() {
     game()
 }
 
-// const body = document.body;
+const body = document.body;
+const div = document.createElement('div');
+// document.getElementById("eachPlay").innerHTML = "Bonjour";
+// document.getElementById("winLose").innerHTML = "Bonjour";
+
+body.append(div)
+
 // const div = document.querySelector('div');
 // const rock = document.querySelector('#rock');
 // const rock = document.getElementById('rock');

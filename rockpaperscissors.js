@@ -33,8 +33,8 @@ function game() {
     var playerScore = 0;
     var cpuScore = 0;
 
-    for (var i = 0; i < 5; i++) {
-        const playerChoice = prompt("Rock, Paper or Scissors? ");
+    // for (var i = 0; i < 5; i++) {
+        // const playerChoice = prompt("Rock, Paper or Scissors? ");
         const playerSelection = playerChoice.toLowerCase();
         const computerSelection = getComputerChoice();
 
@@ -66,7 +66,7 @@ function game() {
                     console.log("You Drew!");
                 }
 
-    }
+    // }
 
     if (playerScore > cpuScore) {
         console.log("You Won! Your score was: " + playerScore);
@@ -77,4 +77,34 @@ function game() {
     }
 }
 
-game();
+function rockButtonClick() {
+    playerChoice = 'rock';
+    game()
+}
+
+function paperButtonClick() {
+    playerChoice = 'paper';
+    game()
+}
+
+function scissorButtonClick() {
+    playerChoice = 'scissors';
+    game()
+}
+
+// const body = document.body;
+// const div = document.querySelector('div');
+// const rock = document.querySelector('#rock');
+// const rock = document.getElementById('rock');
+// const paper = document.getElementById('paper');
+// const scissors = document.getElementById('scissors');
+
+// rock.addEventListener('click', rockButtonClick);
+// paper.addEventListener('click', paperButtonClick);
+// scissors.addEventListener('click', scissorButtonClick);
+
+// rock.addEventListener("click", (event) => {
+//     if (event.target.tagName === "rock") {
+//         console.log('button clicked')
+//     }
+// });

@@ -89,6 +89,12 @@ function game() {
 
 }
 
+// const body = document.body;
+// const rock = document.getElementById('rock');
+// const paper = document.getElementById('paper');
+// const scissors = document.getElementById('scissors');
+
+
 function rockButtonClick() {
     playerChoice = 'rock';
     game()
@@ -104,18 +110,16 @@ function scissorButtonClick() {
     game()
 }
 
-const body = document.body;
-const div = document.createElement('div');
+
+// const div = document.createElement('div');
 // document.getElementById("eachPlay").innerHTML = "Bonjour";
 // document.getElementById("winLose").innerHTML = "Bonjour";
 
-body.append(div)
+// body.append(div)
 
 // const div = document.querySelector('div');
 // const rock = document.querySelector('#rock');
-// const rock = document.getElementById('rock');
-// const paper = document.getElementById('paper');
-// const scissors = document.getElementById('scissors');
+
 
 // rock.addEventListener('click', rockButtonClick);
 // paper.addEventListener('click', paperButtonClick);

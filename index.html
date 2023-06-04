@@ -9,17 +9,28 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="eachPlay">placeholdertext</div>
-    <div id="winLose">placeholdertext</div>
-    <div>
-      <input type="button" value="Rock" onclick="rockButtonClick()">
-      <input type="button" value="Paper" onclick="paperButtonClick()">
-      <input type="button" value="Scissors"  onclick="scissorButtonClick()">
+    <div class="container">
+    <div id="eachPlay"></div>
+    <div id="winLose"></div>
+    <!-- <div>
+      <input type="button" value="Rock" onclick="rockButtonClick()" />
+      <input type="button" value="Paper" onclick="paperButtonClick()" />
+      <input type="button" value="Scissors" onclick="scissorButtonClick()" />
+    </div> -->
+    <div class="grid">
+      <div class="img-wrapper">
+        <img class="zoom blur" src="rock.PNG" alt="" />
+        <div class="content fade" onclick="rockButtonClick()">rock</div>
+      </div>
+      <div class="img-wrapper">
+        <img class="zoom blur" src="paper.PNG" alt="" />
+        <div class="content fade" onclick="paperButtonClick()">paper</div>
+      </div>
+      <div class="img-wrapper">
+        <img class="zoom blur" src="scissors.PNG" alt="" />
+        <div class="content fade" onclick="scissorButtonClick()">scissors</div>
+      </div>
     </div>
-    <div>
-      <img src="rock.PNG" alt="" onclick="rockButtonClick()">
-      <img src="paper.PNG" alt="" onclick="paperButtonClick()">
-      <img src="scissosrs.PNG" alt="" onclick="scissorButtonClick()">
-    </div>
+  </div>
   </body>
 </html>

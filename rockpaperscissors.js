@@ -1,3 +1,5 @@
+var playerScore = 0;
+var cpuScore = 0;
 const choices = ['rock', 'paper', 'scissors'];
 
 function getComputerChoice() {
@@ -27,11 +29,8 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 
-    var playerScore = 0;
-    var cpuScore = 0;
-
     // for (var i = 0; i < 5; i++) {
-        // const playerChoice = prompt("Rock, Paper or Scissors? ");
+        
         const playerSelection = playerChoice.toLowerCase();
         const computerSelection = getComputerChoice();
 
@@ -64,36 +63,26 @@ function game() {
                     console.log("You Drew!");
                 }
 
-    // }
+                // html
+                if (playerScore > cpuScore) {
+                    document.getElementById("winLose").innerHTML = `You Won! Your score was: ${playerScore}`;
+                } else if (playerScore < cpuScore) {
+                    document.getElementById("winLose").innerHTML = `You Lost! Your score was: ${playerScore}`;
+                } else {
+                    document.getElementById("winLose").innerHTML = `You Drew! Your score was: ${playerScore}`;
+                }
     
-    // console.log
-    if (playerScore > cpuScore) {
-        console.log("You Won! Your score was: " + playerScore);
-    } else if (playerScore < cpuScore) {
-        console.log("You Lost! Your score was: " + playerScore);
-    } else {
-        console.log("You Drew! Your score was: " + playerScore);
+        // console.log
+        if (playerScore == 5 || cpuScore == 5) {
+            if (playerScore > cpuScore) {
+            console.log("You Won! Your score was: " + playerScore);
+            } else if (playerScore < cpuScore) {
+                console.log("You Lost! Your score was: " + playerScore);
+            } else {
+                console.log("You Drew! Your score was: " + playerScore);
+            }
+        }
     }
-
-    // html
-    if (playerScore > cpuScore) {
-        console.log("You Won! Your score was: " + playerScore);
-        document.getElementById("winLose").innerHTML = `You Won! Your score was: ${playerScore}`;
-    } else if (playerScore < cpuScore) {
-        console.log("You Lost! Your score was: " + playerScore);
-        document.getElementById("winLose").innerHTML = `You Lost! Your score was: ${playerScore}`;
-    } else {
-        console.log("You Drew! Your score was: " + playerScore);
-        document.getElementById("winLose").innerHTML = `You Drew! Your score was: ${playerScore}`;
-    }
-
-}
-
-// const body = document.body;
-// const rock = document.getElementById('rock');
-// const paper = document.getElementById('paper');
-// const scissors = document.getElementById('scissors');
-
 
 function rockButtonClick() {
     playerChoice = 'rock';
@@ -109,24 +98,3 @@ function scissorButtonClick() {
     playerChoice = 'scissors';
     game()
 }
-
-
-// const div = document.createElement('div');
-// document.getElementById("eachPlay").innerHTML = "Bonjour";
-// document.getElementById("winLose").innerHTML = "Bonjour";
-
-// body.append(div)
-
-// const div = document.querySelector('div');
-// const rock = document.querySelector('#rock');
-
-
-// rock.addEventListener('click', rockButtonClick);
-// paper.addEventListener('click', paperButtonClick);
-// scissors.addEventListener('click', scissorButtonClick);
-
-// rock.addEventListener("click", (event) => {
-//     if (event.target.tagName === "rock") {
-//         console.log('button clicked')
-//     }
-// });

@@ -8,12 +8,17 @@ html, body {
 } */
 
 body {
-    background: url("images/background.jpg");
+    /* background: url("images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     margin: 0;
+}
+
+body {
+    background: rgb(122,133,163);
+    background: linear-gradient(90deg, rgba(122,133,163,1) 0%, rgba(118,146,167,1) 50%, rgba(156,174,179,1) 100%);
 }
 
 /* body {

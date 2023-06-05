@@ -45,7 +45,7 @@ function game() {
             console.log(computerSelection);
             console.log(playerScore);
             console.log(cpuScore);
-            document.getElementById("eachPlay").innerHTML = `You played: ${playerSelection}, PC played: ${computerSelection}`;
+            document.getElementById("eachPlay").innerHTML = `you: ${playerSelection}  |  pc: ${computerSelection}`;
 
                 if (result == 0) {
                     console.log("You Won!");
@@ -65,11 +65,11 @@ function game() {
 
                 // html
                 if (playerScore > cpuScore) {
-                    document.getElementById("winLose").innerHTML = `You Won! Your score was: ${playerScore}`;
+                    document.getElementById("winLose").innerHTML = `you won! your score is: ${playerScore}`;
                 } else if (playerScore < cpuScore) {
-                    document.getElementById("winLose").innerHTML = `You Lost! Your score was: ${playerScore}`;
+                    document.getElementById("winLose").innerHTML = `you lost! your score is: ${playerScore}`;
                 } else {
-                    document.getElementById("winLose").innerHTML = `You Drew! Your score was: ${playerScore}`;
+                    document.getElementById("winLose").innerHTML = `you drew! your score is: ${playerScore}`;
                 }
     
         // console.log
